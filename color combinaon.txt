@@ -1,0 +1,5 @@
+1A5422 dark
+59A824 goma
+325A78 blue
+B64F61 pink
+#25be30 light

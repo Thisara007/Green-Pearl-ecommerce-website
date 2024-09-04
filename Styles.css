@@ -1,0 +1,658 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana,Geneva,Tahoma,sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top:5rem;
+    overflow-x:hidden;
+}
+
+header {
+    /* position:fixed; */
+    top:0;left:0;right:0;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+section{
+    padding: 2rem 9%;
+    background-color: #CCFFCC;
+    padding-top: 14rem;
+
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #66ff66;
+}
+.heading span{
+    color: #fff ;
+}
+.btn{
+    display: inline-block;
+    margin-top: .5rem;
+    border-radius:1rem;
+    background:#25be30;
+    color:#33333;
+    padding: 0.5rem 1.5rem;
+    cursor:pointer;
+    font-size:1.5rem;
+}
+.btn:hover{
+    background:#325A78;
+}
+
+header .logo{
+    font-size:2rem;
+    color: #333333;
+    font-weight: bolder;
+}
+header .logo span{
+    color:#25be30
+}
+header img{
+    width:25rem;
+    height:1rem; 
+}
+
+header .navbar a{
+    font-size:2rem;
+    padding: 0 1rem;
+    color: #666;
+}
+header .navbar a:hover{
+    color:#25be30
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem;
+}
+
+header .icons a:hover{
+    color:#25be30;
+}
+header #toggler{
+    display: none;
+}
+header .menubar{
+    font-size:3rem;
+    color:#333;
+    border-radius: 0.5rem;
+    padding:.75rem 1rem ;
+    cursor:pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display:none;  
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height:auto;
+    background:url(photos/background.jpg) no-repeat;
+    background-size: cover;
+    margin-top:4rem;
+
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem ;
+    color:#177315;
+}
+.home .content h6{
+    font-size: 4rem ;
+    color:#177315;
+}
+
+.home .content span{
+    font-size:3.5rem;
+    color:#666;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.home .content p{
+    font-size: 1.5rem;
+    color:#325A78;
+     padding: 1rem 0;
+    line-height: 1.5;
+    font-weight:bold;
+}
+.home .content a{
+    font-size: 1.8rem;
+    color: #000;
+     padding: 1rem 1rem;
+    line-height: 1.5;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+
+
+}
+.about .row .vid_container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+.about .row .vid_container video{
+    width:100%;
+    border : 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    height: 100%
+    object-fitcover;
+}
+.about .row .vid_container h3{
+    text-align:center;
+    top:50% ;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    padding:1rem 2rem;
+    mix-blend-mode: screen;
+    position: absolute;
+}
+.about .row .content{
+    flex: 1 1 40rem;
+
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color:#177315;
+}
+.about .row .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding: 5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5rem;
+}
+.about .row .content a{
+    font-size: 1.8rem;
+    color: #000;
+     padding: 1rem 1rem;
+    line-height: 1.5;
+}
+
+.products .Box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.products .Box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0.5rem .5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border:.01rem solid rgba(0,0,0,0.1);
+    position:relative;
+    background-color:#fff7;
+    max-width: 32.2rem;
+    max-height:50rem;
+    object-fit: cover;
+}
+
+.products .Box-container .box .discount{
+    position: absolute;
+    top:1rem;
+    left:1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color:#25be30;
+    background: rgba(255,51,153,.05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+.products .Box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+.products .Box-container .box .image img{
+    height: 25rem;
+}
+.products .Box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.products .Box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.products .Box-container .box:hover .image .icons{
+    bottom: 0;
+    }
+
+
+.products .Box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background:#25be30 ;
+    color:#fff;
+}
+
+.products .Box-container .box .image .icons .add_to_cart{
+    border-left: .1rem solid #fff7;
+    border-right:.1rem solid #fff7;
+    width: 100%
+}
+.products .Box-container .box .image .icons a:hover{
+    background: #333;
+}
+
+.products .Box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+.products .Box-container .box .content h3{
+    font-size: 2.5rem;
+    color:#333;
+}
+.products .Box-container .box .content .price{
+    font-size: 2.5rem;
+    color:#333;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.products .Box-container .box .content .price span{
+    font-size: 1.5rem;
+    color:#999;
+    font-weight: lighter;
+   text-decoration: line-through;
+}
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.review .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0.5rem .5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+
+}
+.review .box-container .box .quote-icon{
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 10rem;
+    color: #eee;
+    }
+.review .box-container .box .stars i{
+    color:#25be30 ;
+    font-size: 2rem;
+}
+.review .box-container .box p{
+    color:#999;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+
+}
+
+.review .box-container .box .user img{
+    height:6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color:#333;
+}
+.review .box-container .box .user span{
+    font-size: 1rem;
+    color:#999;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10rem;
+}
+.contact .row image{
+    flex: 1 1 40rem;
+}
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: .5rem .5rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.contact .row .image img{
+    width:100%;
+}
+
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color:#333;
+    text-transform: none;
+     border: .1rem solid rgba(0,0,0,.1);
+     margin: .7rem 0;
+     border-radius: .5rem;
+     width:100%;
+}
+
+.contact .row form .box:focus{
+    border-color:#25be30 ; 
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+.footer1{
+    padding: 2rem;
+    justify-content: space-between;
+}
+.footer1 .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    border-top:1rem;
+    border-color:#333;
+    padding-top: 2rem;
+     
+}
+.footer1 .box-container .box{
+    flex:1 1 25rem;
+}
+.footer1 .box-container .box h3{
+    color:#333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer1 .box-container .box a{
+    color:#666;
+    display: block;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer1 .box-container .box a:hover{
+    color:#25be30;
+    text-decoration: underline;
+  }
+
+.sign_up .signup-container{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: .5rem .5rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+.sign_up .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: .5rem .5rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+/* profile page css */
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.userdata {
+    padding: 1rem;
+    background-color: rgb(195, 246, 188);
+    width: 35%;
+    height: 100%;
+    border-radius: 5%;
+    align-items: center;
+    object-fit: cover;
+    /* max-width:43rem; */
+    overflow-x: hidden; 
+
+
+}
+.profileimgcontainer {
+    justify-content: center;    /* Optional: to center the image */
+    align-items: center;        /* Optional: to center the image */
+    height:15rem;              /* Set the height of the container */
+    width: 15rem;               /* Set the width of the container */
+    overflow: hidden;           /* Ensure the image doesn't overflow the container */
+    border-radius: 50%;         /* Make the container a circle */
+    border: .5px solid #000;     /* Optional: add a border to the container */
+    margin: auto;
+    margin-top: 2rem;
+}
+.pimg {
+    height: 100%;               /* Ensure the image covers the container */
+    width: 100%;                /* Ensure the image covers the container */
+    object-fit: cover;          /* Cover the container with the image */
+}
+.userdata h3{
+    margin: 1.5rem 2rem 3.5rem 2rem;
+    padding: .5rem;
+    font-size: 1.5rem;
+    color:#0f1b24;
+    line-height: 1.5;
+    font-weight:light;
+    
+}
+.userdata h1 {
+    padding: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333
+}
+.colcontainer {
+    display: flex;
+}
+.colcontainer .col2 h3{
+    background-color: rgb(155, 158, 157);
+    border-radius: 1rem;
+    font-weight:bold;
+    
+}
+.orderhistory {
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 0;
+   
+    
+}
+/* ueserdata finish */
+.c2 {
+   width: 100%;
+   height: 100%;
+}
+/* table */
+.order-history-container {
+   
+    align-self: center;
+    width: 100%;
+    margin: auto ;
+    padding: .5rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    max-height: 20rem;
+    overflow-y: auto;
+   
+}
+
+.profile table {
+    align-self: center;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 2rem 9%;
+}
+.profile th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.profile th {
+    background-color: #66ff66;
+    color: #333;
+}
+.profile tr:hover {
+    background-color: #f1f1f1;
+}
+.restsectin {
+    background-color:  hsl(347, 56%, 72%);
+    height: 50%;
+    width: 100%;
+    padding-bottom: 0;
+}
+.colcontainer2 {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    justify-content: space-between;
+} 
+.colcontainer2 form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 11.7rem;
+    box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 0.5rem;
+    width: 100%;
+    
+    /* max-width: 50rem; */
+}
+.colcontainer2 form .box {
+    align-self: justify;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    text-transform: none;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    margin: 0.7rem 0;
+    border-radius: 0.2rem;
+    width: 90%;
+}
+.colcontainer2 input[type="submit"] {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #66ff66;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+.colcontainer2 input[type="submit"]:hover {
+    background: #55cc55;
+}
+.profile h2 {
+    color: #529759;
+    font-size: 1.5rem;
+    padding: .2rem;
+}
+
+/* profile page end */
+.alert_warning {
+            
+    background-color:#ff000080;
+    font-size: 1rem;
+    align-self: flex;
+    padding :1rem 2rem;
+    border-radius:0.5rem;
+}
+
+
+/*media queries*/
+@media (max-width:991px){
+    html{
+    font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
+}
+@media (max-width:768px){
+    header .menubar{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display:block; 
+    }
+}
+@media (max-width:450px){
+    html{
+    font-size: 50%;
+    }
+}
